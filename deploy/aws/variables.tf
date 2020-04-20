@@ -9,7 +9,7 @@ variable "region" {
 
 variable "eks_name" {
   description = "Name of the EKS cluster. Also used as a prefix in names of related resources."
-  default     = "my-cluster"
+  default     = "poc-cluster"
 }
 
 variable "eks_version" {
@@ -19,7 +19,7 @@ variable "eks_version" {
 
 variable "operator_version" {
   description = "TiDB operator version"
-  default     = "v1.1.0"
+  default     = "v1.1.0-rc.2"
 }
 
 variable "operator_values" {
@@ -80,7 +80,7 @@ variable "bastion_instance_type" {
 
 # For aws tutorials compatiablity
 variable "default_cluster_version" {
-  default = "v3.0.8"
+  default = "v4.0.0-rc"
 }
 
 variable "default_cluster_pd_count" {
@@ -92,27 +92,27 @@ variable "default_cluster_tikv_count" {
 }
 
 variable "default_cluster_tidb_count" {
-  default = 2
+  default = 1
 }
 
 variable "default_cluster_pd_instance_type" {
-  default = "m5.xlarge"
+  default = "c5d.large"
 }
 
 variable "default_cluster_tikv_instance_type" {
-  default = "c5d.4xlarge"
+  default = "c5d.large"
 }
 
 variable "default_cluster_tidb_instance_type" {
-  default = "c5.4xlarge"
+  default = "c4.large"
 }
 
 variable "default_cluster_monitor_instance_type" {
-  default = "c5.2xlarge"
+  default = "c5.large"
 }
 
 variable "default_cluster_name" {
-  default = "my-cluster"
+  default = "first-cluster"
 }
 
 variable "create_tidb_cluster_release" {
